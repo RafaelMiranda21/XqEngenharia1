@@ -1,0 +1,55 @@
+let slides;
+let pontoIndicador;
+let imgAtual;
+let tempoTroca;
+let Intervalo;
+
+function carregaImg(img){
+   for(let i=0; i < slides.length; i++){
+       slides[i].style.display = "none";
+       pontoIndicador[i].className = pontoIndicador[i].className.replace(" ativo", "");
+   }
+    
+   slides[img].style.display = "block";
+   pontoIndicador[img].className += " ativo";
+}
+
+function troca(n){
+    tempoTroca = 0;
+    imgAtual+=n;
+    console.log(imgAtual);
+    if(imgAtual > slides.length-1){
+        imgAtual = 0;
+    }else if(imgAtual < 0){
+        imgAtual = slides.length-1;
+    }
+
+    carregaImg(imgAtual);
+}
+
+function tempo(){
+    tempoTroca++;
+    if(tempoTroca >= Intervalo){
+        tempoTroca = 0;
+        troca(1);
+    }
+    window.requestAnimationFrame(tempo);
+}
+
+function Indicador(n){
+
+   imgAtual = n;
+   carregaImg(imgAtual);
+}
+
+ function inicia(){
+         slides = document.getElementsByClassName("slide");
+         pontoIndicador = document.getElementsByClassName("ponto-indicador-slide");
+         imgAtual = 0 ;
+         tempoTroca = 0;
+         Intervalo = 200;
+         carregaImg(imgAtual);
+         tempo()
+     }
+  
+     window.addEventListener("load",inicia);
