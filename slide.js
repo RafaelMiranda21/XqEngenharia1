@@ -45,6 +45,7 @@ function tempo(){
  
 function TrocaIndicador(img){
     imgAtual = img;
+    tempoTroca = 0;
     carregaImg(imgAtual);
 }
 
