@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="slide.css">
     <link rel="stylesheet" href="contato.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
     <script src="script.js" defer></script>
     <script src="slide.js" defer></script>
     <script src="contato.js" defer></script>
@@ -26,20 +26,21 @@
           </div> 
         <header id="home">
         <div class="img-wrapper">
-            <img src="background.jpg" alt="Backgorund">
+            <img src="imagens/background.jpg" alt="Backgorund">
         </div>
         <div class="banner">
-        <div class="logo"><img src="Xq.png" alt="Xq Engenharia"><h1>Engenharia</h1></div>
+         <div class="logo"><img src="/imagens/Xq.png" alt="Xq Engenharia"><h1>Engenharia</h1></div>   
         <p>Engenharia Civil não e sobre construir coisas, mas sim, executar sonhos.</p>
+        <!-- <button>Saiba Mais</button> -->
         </div>
         
         </header>
     <aside class="sidebar">
         <nav class="menu">
-            <li class="menu-item"><a href="#home" class="menu-link">A Empresa</a></li>
-            <li class="menu-item"><a href="#slides" class="menu-link">Áreas de Atuação</a></li>
-            <li class="menu-item"><a href="#contatos" class="menu-link">Trabalhe Conosco</a></li>
-            <li class="menu-item"><a href="#contatos" class="menu-link">Contato</a></li>
+            <li class="menu-item"><a href="#home" class="menu-link" onclick="fecharSidebar()">A Empresa</a></li>
+            <li class="menu-item"><a href="#slides" class="menu-link"  onclick="fecharSidebar()">Áreas de Atuação</a></li>
+            <li class="menu-item"><a href="#contatos" class="menu-link" onclick="fecharSidebar()">Trabalhe Conosco</a></li>
+            <li class="menu-item"><a href="#contatos" class="menu-link" onclick="fecharSidebar()">Contato</a></li>
         </nav>
         <div class="social-media">
             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -49,51 +50,51 @@
     </aside>
 
 
-    <section class="Area-Atuacao" id="slides">
+    <section class="Area-Atuacao " id="slides">
        <div class="sessao-header">
            <h1>Áreas de Atuação</h1>
        </div>
        <div class="Atuacao-slides" >
             <div class="slide fade">
-                <img src="mineradora.jpg" alt="Mineradora">
+                <img src="/imagens/mineradora.jpg" alt="Mineradora">
                 <div class="descricao-slide">
                     <h1>Mineradora</h1>
                 </div> 
             </div>
             <div class="slide fade">
-                <img src="Saneamento básico.jpg" alt="Saneamento Basico">
+                <img src="/imagens/Saneamento básico.jpg" alt="Saneamento Basico">
                 
                 <div class="descricao-slide"><h1>Saneamento Basico</h1></div>
             </div>  
             <div class="slide fade">
-                <img src="Segurança do trabalho.jpg" alt="Segurança no Trabalho">
+                <img src="/imagens/Segurança do trabalho.jpg" alt="Segurança no Trabalho">
                 
                 <div class="descricao-slide"><h1>Segurança no Trabalho</h1></div>
             </div>  
             <div class="slide fade">
-                <img src="pontes e viadutos.jpg" alt="pontes e viadutos">
+                <img src="/imagens/pontes e viadutos.jpg" alt="pontes e viadutos">
                 
                 <div class="descricao-slide"><h1>pontes e viadutos</h1></div>
             </div>  
             <div class="slide fade">
-                <img src="rodovias e transporte.jpg" alt="rodovias e transporte">
+                <img src="/imagens/rodovias e transporte.jpg" alt="rodovias e transporte">
                 
                 <div class="descricao-slide"><h1>rodovias e transporte</h1></div>
             </div>  
             <div class="slide fade">
-                <img src="predios.jpg" alt="predios">       
+                <img src="/imagens/predios.jpg" alt="predios">       
                 <div class="descricao-slide"><h1>predios</h1></div>
             </div>   
        </div>
 
 
        <div class="indicador-slide">
-        <span class="ponto-indicador-slide" onclick="Indicador(0)"></span>
-        <span class="ponto-indicador-slide" onclick="Indicador(1)"></span>
-        <span class="ponto-indicador-slide" onclick="Indicador(2)"></span>
-        <span class="ponto-indicador-slide" onclick="Indicador(3)"></span>
-        <span class="ponto-indicador-slide" onclick="Indicador(4)"></span>
-        <span class="ponto-indicador-slide" onclick="Indicador(5)"></span>
+        <span class="ponto-indicador-slide" onclick="carregaImg(0)"></span>
+        <span class="ponto-indicador-slide" onclick="carregaImg(1)"></span>
+        <span class="ponto-indicador-slide" onclick="carregaImg(2)"></span>
+        <span class="ponto-indicador-slide" onclick="carregaImg(3)"></span>
+        <span class="ponto-indicador-slide" onclick="carregaImg(4)"></span>
+        <span class="ponto-indicador-slide" onclick="carregaImg(5)"></span>
        </div>
 
        <a class="anterior" onclick="troca(-1)">&#10094;</a>
@@ -106,13 +107,13 @@
         </div>
         <div class="sessao-contatos">
             <div class="contato trabalhe-conosco">
-                <img src="trabalhe conosco.jpg" alt="trabalhe conosco" >
+                <img src="/imagens/trabalhe conosco.jpg" alt="trabalhe conosco" >
                 <div class="titulo-contato"><h1>Trabalhe Conosco</h1></div>
                 <div class="subtitulo-contato"><p>Uma equipe de trabalho unida e mais forte, mais inteligente e muito mais provável de alcançar o sucesso!</p></div>
             </div>
             <div class="contato fale-conosco">
                 
-                <img src="contato.jpg" alt="contato">
+                <img src="/imagens/contato.jpg" alt="contato">
                 <div class="titulo-contato"><h1>Fale Conosco</h1></div>
                 <div class="subtitulo-contato"><p>Uma equipe de trabalho unida e mais forte, mais inteligente e muito mais provável de alcançar o sucesso!</p></div>
             </div>
@@ -142,7 +143,7 @@
 
                 <button type="submit">Enviar</button>
             </form>
-            <img src="formulario.png" alt="Formulario">
+            <img src="/imagens/formulario.png" alt="Formulario">
         </div>
 
         <div class="formulario-contato2">
@@ -167,7 +168,7 @@
 
                 <button type="submit">Enviar</button>
             </form>
-            <img src="fale-conosco.jpg" alt="Fale Conosco">
+            <img src="/imagens/fale-conosco.jpg" alt="Fale Conosco">
         </div>
 
     </section>
