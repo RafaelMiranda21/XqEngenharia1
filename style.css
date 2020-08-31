@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,100&display=swap');
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 
 *{
@@ -39,11 +40,11 @@ header{
     right: 16rem;
   }
 
-  .show-contato  .hamburguer,
+  /* .show-contato  .hamburguer,
   .show-form .hamburguer{
-      display: none;
+      position: absolute;
   }
-  
+   */
 
 .hamburguer span {
     position: absolute;
@@ -126,40 +127,80 @@ header{
     position: absolute;
     color: #fff;
     left: 10%;
-    top: 45%;
+    top: 35%;
     line-height: 2.5rem;
+}
+
+.logo{
+    display: flex;
+    max-height: 10rem ;
+    margin-bottom: .5rem;
+}
+
+.logo img{
+    animation: moveBannerImg 3s forwards;
+    box-shadow: -0.7rem .2rem 10px rgba(0, 0, 0, 0.9);
+    border-radius: 10%;
+    width: 10rem;
+    height: 7rem;
+    margin-right: 2rem;
+    opacity: 0;
+   /* background: #20002c;  
+   background: -webkit-linear-gradient(to left, #9730c3, #20002c); 
+    background: linear-gradient(to left, #a52dd8, #20002c);  */
+
+}
+@keyframes moveBannerImg{
+    0%{
+        transform: translateY(30rem) rotateY(-200deg);
+        transform: scale(20);
+    }
+
+    50%{
+        opacity: .3;
+    }
+
+    100%{
+        background: #20002c;  
+        background: -webkit-linear-gradient(to left, #9730c3, #20002c); 
+         background: linear-gradient(to left, #a52dd8, #20002c); 
+         opacity: 1;
+    }
+
 }
 
 
 
-.banner h1{
+.logo h1{
     font-family: "Poppins",serif;
-    font-size: 2.5rem;
-    font-weight: 400;
-    text-shadow: -.2rem .2rem 3px rgba(0, 0, 0, 0.9);
+    font-size: 4rem;
+    font-weight: 1000;
+    text-shadow: -.5rem .2rem 8px rgba(0, 0, 0, 0.9);
     letter-spacing: .2rem;
     opacity: 0;
-    animation: moveBanner 1s forwards;
+    animation: moveBanner 3s forwards;
     white-space: nowrap;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.4rem; 
+    line-height: 8rem;
 }
 
 .banner p{
     line-height: normal;
-    font-size: 1rem;
-    font-weight: 200;
+    font-size: 1.4rem;
+    font-weight: 300;
     text-shadow: 0.2rem .2rem 3px rgba(0, 0, 0, 0.9);
     letter-spacing: .1rem;
     opacity: 0;
     animation: moveBanner 2s forwards;
 }
 
-.banner button{
+/* .banner button{
     margin-top: 1rem;
     background: #20002c;  
     background: -webkit-linear-gradient(to right, #9730c3, #20002c); 
     background: linear-gradient(to right, #a52dd8, #20002c); 
     border: 0;
+    box-shadow: -.1rem .3rem 10px rgba(0, 0, 0, 0.9);
     padding: 1rem 3rem;
     color:#fff;
     border-radius: 7px;
@@ -169,7 +210,6 @@ header{
     opacity: 0;
     animation: moveBanner 3s forwards;
     outline: none;
-
 }
 
 .banner button:hover{
@@ -177,7 +217,7 @@ header{
     background: -webkit-linear-gradient(to right, #8f0ec7, #100016); 
     background: linear-gradient(to right, #9c0cda, #0f0014);
 
-}
+} */
 
 @keyframes moveBanner{
     0%{
