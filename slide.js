@@ -43,4 +43,10 @@ function tempo(){
     window.requestAnimationFrame(tempo);
 }
  
+function TrocaIndicador(img){
+    imgAtual = img;
+    carregaImg(imgAtual);
+}
+
+
      window.addEventListener("load",inicia);
