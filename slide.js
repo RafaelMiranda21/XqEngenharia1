@@ -11,7 +11,7 @@ function inicia(){
     tempoTroca = 0;
     Intervalo = 200;
     carregaImg(imgAtual);
-    tempo()
+    tempo();
 }
 
 function carregaImg(img){
@@ -21,6 +21,15 @@ function carregaImg(img){
    }
    slides[img].style.display = "block";
    pontoIndicador[img].className += " ativo";
+}
+
+function tempo(){
+    tempoTroca++;
+    if(tempoTroca >= Intervalo){
+        tempoTroca = 0;
+        troca(1); //sempre vai receber 1 para passar para a prox imagem
+    }
+    window.requestAnimationFrame(tempo);
 }
 
 function troca(n){
@@ -34,14 +43,7 @@ function troca(n){
     carregaImg(imgAtual);
 }
 
-function tempo(){
-    tempoTroca++;
-    if(tempoTroca >= Intervalo){
-        tempoTroca = 0;
-        troca(1); //sempre vai receber 1 para passar para a prox imagem
-    }
-    window.requestAnimationFrame(tempo);
-}
+
  
 function TrocaIndicador(img){
     imgAtual = img;
@@ -49,5 +51,4 @@ function TrocaIndicador(img){
     carregaImg(imgAtual);
 }
 
-
-     window.addEventListener("load",inicia);
+     window.addEventListener("load",inicia);  //chama a função inicia quando carrega a pagina

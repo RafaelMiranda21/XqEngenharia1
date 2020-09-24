@@ -1,0 +1,96 @@
+.sobreNos{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+.backgroundSobreNos{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(150deg, transparent, rgba(13, 0, 27, 0.589),rgba(12, 1, 26, 0.801));
+    position: absolute;
+    
+}
+
+.poligono-top{
+    position: absolute;
+    width: 100%;
+    height: 5rem;
+    background: #fff;
+    /* background: linear-gradient(269.59deg, #FFFFFF 10%, rgba(255, 255, 255, 0.0391399) 23.25%, rgba(255, 255, 255, 0) 24.18%), linear-gradient(90deg, #FFFFFF 10%, rgba(255, 255, 255, 0) 21.17%), #a5a5a5; */
+    /* background: radial-gradient(#a5a5a5 50% ,#fff ); */
+    top: 0;
+    clip-path: polygon(0% 0%, 70% 100%, 100% 0%);
+}
+
+
+.poligono-bottom{
+    position: absolute;
+    width: 100%;
+    height: 5rem;
+    bottom: 0;
+    background: #fff;
+    /* background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 99.13%), #6C6B6B; */
+    /* background-blend-mode: soft-light, normal; */
+    clip-path: polygon(0% 100%, 30% 0%, 100% 100%);
+}
+
+ 
+.imgSobrenos{
+    width: 100%;
+    height: 100%;
+    background-image: url("SobreNos.gif");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    opacity: .2;
+}
+
+.Area-Historia{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+.titulo-Historia{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    margin-bottom: 2rem;
+    /* color: rgb(255, 94, 0); */
+    
+}
+
+.titulo-Historia h1{
+    /* border-bottom: 1px dashed rgb(195, 0, 255); */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+
+}
+
+.Historia{
+   width: 100%;
+   font-weight: bold;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* color: rgb(255, 94, 0); */
+   color: #fff;
+}
+
+.Historia p{
+    font-size: 1.4rem;
+}

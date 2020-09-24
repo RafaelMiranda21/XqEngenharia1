@@ -6,51 +6,75 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="slide.css">
     <link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="sobreNos.css">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <script src="script.js" defer></script>
     <script src="slide.js" defer></script>
     <script src="contato.js" defer></script>
+    <script src="scroll.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
     <link rel="manifest" href="/site.webmanifest">
+    
     
     <title>Xq Engenharia</title>
 </head>
-<body>
+<body id ="body">
+    
     <div class="container">
+        
+        <div class="loader">
+            <img  src="Xq.png" alt="loader">
+            <div class="borda-loader"></div>
+        </div>
+
+
+    <div class="menu-hamburguer">
+         <p>Menu</p>
         <div class="hamburguer">
             <div class="line" id="line1"></div>
             <div class="line" id="line2"></div>
             <div class="line" id="line3"></div>
             <span>Fechar</span>
-          </div> 
+    </div> 
+</div>
+        
         <header id="home">
+            
         <div class="img-wrapper">
             <img src="background.jpg" alt="Backgorund">
         </div>
         <div class="banner">
          <div class="logo"><img src="Xq.png" alt="Xq Engenharia"><h1>Engenharia</h1></div>   
         <p>Engenharia Civil não e sobre construir coisas, mas sim, executar sonhos.</p>
-        <!-- <button>Saiba Mais</button> -->
+        <!-- <a href="#sobreNos"><button> Sobre Nos</button></a> -->
         </div>
-        
+        <span class="poligono"></span>
         </header>
     <aside class="sidebar">
         <nav class="menu">
-            <li class="menu-item"><a href="#home" class="menu-link" onclick="fecharSidebar()">A Empresa</a></li>
             <li class="menu-item"><a href="#slides" class="menu-link"  onclick="fecharSidebar()">Áreas de Atuação</a></li>
-            <li class="menu-item"><a href="#contatos" class="menu-link" onclick="fecharSidebar()">Trabalhe Conosco</a></li>
-            <li class="menu-item"><a href="#contatos" class="menu-link" onclick="fecharSidebar()">Contato</a></li>
+            <li class="menu-item"><a href="#sobreNos" class="menu-link" onclick="fecharSidebar()">A Empresa</a></li>
+            <li class="menu-item"><a href="#contatos" class="menu-link" onclick="fecharSidebar() , AreadeTrabalho()">Trabalhe Conosco</a></li>
+            <li class="menu-item"><a href="#contatos" class="menu-link" onclick="fecharSidebar() , AreadeContato()">Contato</a></li>
         </nav>
         <div class="social-media">
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=55062996377645 &text=Tenho interesse no serviço da Xq Engenharia" target="_blank"><i class="fab fa-whatsapp"></i></a>
             <a href="#"><i class="far fa-envelope"></i></a>
         </div>
     </aside>
 
 
+
+
+
+
+
+
     <section class="Area-Atuacao " id="slides">
+        
        <div class="sessao-header">
            <h1>Áreas de Atuação</h1>
        </div>
@@ -89,90 +113,135 @@
 
 
        <div class="indicador-slide">
-        <span class="ponto-indicador-slide" onclick="TrocaIndicador(0)"></span>
-        <span class="ponto-indicador-slide" onclick="TrocaIndicador(1)"></span>
-        <span class="ponto-indicador-slide" onclick="TrocaIndicador(2)"></span>
-        <span class="ponto-indicador-slide" onclick="TrocaIndicador(3)"></span>
-        <span class="ponto-indicador-slide" onclick="TrocaIndicador(4)"></span>
-        <span class="ponto-indicador-slide" onclick="TrocaIndicador(5)"></span>
+        <span class="ponto-indicador-slide" onclick="TrocaIndicador(0)"> <p> Mineradora</p></span>
+        <span class="ponto-indicador-slide" onclick="TrocaIndicador(1)"><p>Saneamento Basico</p></span>
+        <span class="ponto-indicador-slide" onclick="TrocaIndicador(2)"><p>Segurança no Trabalho</p></span>
+        <span class="ponto-indicador-slide" onclick="TrocaIndicador(3)"><p>pontes e viadutos</p></span>
+        <span class="ponto-indicador-slide" onclick="TrocaIndicador(4)"><p>rodovias e transporte</p></span>
+        <span class="ponto-indicador-slide" onclick="TrocaIndicador(5)"><p>predios</p></span>
        </div>
-
 
        <a class="anterior" onclick="troca(-1)">&#10094;</a>
        <a class="proximo" onclick="troca(1)">&#10095;</a>
+
+       <div class="poligono"></div>
     </section>
 
-    <section class="Area-contato" id="contatos">
-        <div class="sessao-header">
-           <h1>Contato</h1> 
-        </div>
-        <div class="sessao-contatos">
-            <div class="contato trabalhe-conosco">
-                <img src="trabalhe conosco.jpg" alt="trabalhe conosco" >
-                <div class="titulo-contato"><h1>Trabalhe Conosco</h1></div>
-                <div class="subtitulo-contato"><p>Uma equipe de trabalho unida e mais forte, mais inteligente e muito mais provável de alcançar o sucesso!</p></div>
+
+    <div class="sobreNos" id="sobreNos">
+        <div class="imgSobrenos"></div>
+        <div class="backgroundSobreNos"></div>
+             <div class="poligono-top"> </div>
+
+
+             <div class="Area-Historia">
+                <div class="titulo-Historia">
+                    <h1>Sobre a Xq Engenharia</h1>
+               </div>
+                <div class="Historia">
+                    <p>Em 2019 marca o início das atividades da Xq Engenharia - que imbuída pelos ideais e dinamismo de seus fundadores, iniciou uma trajetória de sucesso que hoje a situa entre as maiores empresas da região Centro-Oeste.</p>
+                </div>
             </div>
-            <div class="contato fale-conosco">
+
+             <div class="poligono-bottom"></div>
+        
+       
+
+      </div>
+
+      <section class="Area-contato" id="contatos">
+        <div class="contatoTitulo">
+            <h1>Contate-Nos</h1>
+        </div>
+        <div class="ContatoBox">
+           
+
+
+            <div class="infBox">
+                <div class="infContato">
+                    <div class="CabecalhoInf">
+                        <h2>Informação Contato</h2>
+                    </div>
+                    <div class="grupoContato">
+                        <div class="icone"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="campContato">
+                            <h2>Endereço</h2>
+                            <p>4671 Sugar Comp Rood,
+                                Owatonna,Minnesota,
+                                55060</p>
+                        </div>
+                    </div>
+                    <div class="grupoContato">
+                        <div class="icone"><i class="fas fa-phone-alt"></i></div>
+                        <div class="campContato">
+                            <h2>Telefone</h2>
+                            <p>(62) 3287-3928</p>
+                        </div>
+                    </div>
+                    <div class="grupoContato">
+                        <div class="icone"><i class="fas fa-envelope"></i></div>
+                        <div class="campContato">
+                            <h2>Email</h2>
+                            <p>robssonlobo1@gmail.com</p>
+                        </div>
+                    </div>
+               </div>
                 
-                <img src="contato.jpg" alt="contato">
-                <div class="titulo-contato"><h1>Fale Conosco</h1></div>
-                <div class="subtitulo-contato"><p>Uma equipe de trabalho unida e mais forte, mais inteligente e muito mais provável de alcançar o sucesso!</p></div>
             </div>
-
-            
+            <div class="MensagemBox">
+                <div class="formBoxTrabalho">
+                    <div class="formTituloTrabalho">
+                       <h2>Mande seu Curriculo</h2>     
+                    </div>
+                    <div class="input-groupTrabalho">
+                        <input type="text" placeholder="Nome Completo">
+                    </div>
+                    <div class="input-groupTrabalho">
+                       <input type="email" placeholder="Email">
+                   </div>
+                   <div class="input-groupTrabalho">
+                       <textarea placeholder="Sua mensagem"></textarea>
+                   </div>
+                   
+                    <label for="curriculot">Curriculo:</label>
+                    <input class="inputImg" type="file" name="curriculot" style="width: 20rem; outline: none;">
                 
-        </div>
-        <div class="formulario-contato">
-            <div class="fechar-form">
-                <div class="line1"></div>
-                <div class="line2"></div>
+                   <div class="input-buttonTrabalho">
+                       <input type="button" value="Enviar">
+                   </div>
+                </div>
+                <div class="formBox">
+                    <div class="formTitulo">
+                       <h2>Mande sua mensagem</h2>     
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="Nome Completo">
+                    </div>
+                    <div class="input-group">
+                       <input type="email" placeholder="Email">
+                   </div>
+                   <div class="input-group">
+                       <textarea placeholder="Sua mensagem"></textarea>
+                   </div>
+                   <div class="input-button">
+                       <input type="button" value="Enviar">
+                   </div>
+                </div>
             </div>
-            <h1>trabalhe Conosco</h1>
-            <form>
-                <div class="input-group">
-                    <input type="text" class="field" id="nome"  >
-                    <label for="nome" class="field-label">Nome</label>
-                </div>
-                <div class="input-group">
-                    <input type="text" class="field" id="email">
-                    <label for="email" class="field-label">Email</label>
-                </div>
-                <div class="input-group">
-                    <textarea class="field" id="mensagem"></textarea>
-                    <label for="mensagem" class="field-label">Mensagem</label>
-                </div>
+                 
 
-                <button type="submit">Enviar</button>
-            </form>
-            <img src="formulario.png" alt="Formulario">
+                 
         </div>
-
-        <div class="formulario-contato2">
-            <div class="fechar-chat">
-                <div class="line1"></div>
-                <div class="line2"></div>
+        <div class="Area-Checkbox ">
+            <div class="checkbox">
+                <div class="bolinha-checkbox"></div>
             </div>
-            <h1>Fale Conosco</h1>
-            <form>
-                <div class="input-group">
-                    <input type="text" class="field" id="nome"  >
-                    <label for="nome" class="field-label">Nome</label>
-                </div>
-                <div class="input-group">
-                    <input type="text" class="field" id="email">
-                    <label for="email" class="field-label">Email</label>
-                </div>
-                <div class="input-group">
-                    <textarea class="field" id="mensagem"></textarea>
-                    <label for="mensagem" class="field-label">Mensagem</label>
-                </div>
-
-                <button type="submit">Enviar</button>
-            </form>
-            <img src="fale-conosco.jpg" alt="Fale Conosco">
+            <h3> Trabalhe-Conosco</h3>
         </div>
+     </section>
 
-    </section>
+
+   
         
 
 

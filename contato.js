@@ -1,17 +1,30 @@
-document.querySelector(".trabalhe-conosco").addEventListener("click", () =>
-document.querySelector(".container").classList.toggle("show-form")
-);
 
-document.querySelector(".fechar-form").addEventListener("click", () =>
-document.querySelector(".container").classList.toggle("show-form")
-);
+let AreaCheckbox = document.querySelector(".Area-Checkbox ");
+let formTrabalho = document.querySelector(".formBoxTrabalho");
+let form = document.querySelector(".formBox");
 
 
-document.querySelector(".fale-conosco").addEventListener("click", () =>
-document.querySelector(".container").classList.toggle("show-contato")
-);
+let checkbox = document.querySelector(".checkbox").addEventListener("click", ()=>{
+    AreaCheckbox.classList.toggle("showCheckbox");
+    formTrabalho.classList.toggle("showform");
+    form.classList.toggle("showform");
+})
 
-document.querySelector(".fechar-chat").addEventListener("click", () =>
-document.querySelector(".container").classList.toggle("show-contato")
-);
+function AreadeTrabalho(){
+    
+    AreaCheckbox.className = AreaCheckbox.className.replace(" showCheckbox","");
+    formTrabalho.className = formTrabalho.className.replace(" showform",""); 
+    form.className = form.className.replace(" showform",""); 
 
+    AreaCheckbox.classList.toggle("showCheckbox");
+    formTrabalho.classList.toggle("showform");
+    form.classList.toggle("showform");
+}
+
+
+
+function AreadeContato(){
+    AreaCheckbox.className = AreaCheckbox.className.replace(" showCheckbox","");
+    formTrabalho.className = formTrabalho.className.replace(" showform",""); 
+    form.className = form.className.replace(" showform","");  
+}
